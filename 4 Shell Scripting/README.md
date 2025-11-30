@@ -135,7 +135,7 @@ Each permission has a numeric value (r=4, w=2, x=1).
 
 Example:
 
-chmod 755 script.sh
+chmod 755 script.sh 
 
 
 Means:
