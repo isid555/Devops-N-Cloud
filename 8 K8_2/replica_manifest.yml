@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: calv
+  labels:
+    app: calv
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: calv
+
+  template:
+    metadata:
+      labels:
+        project: calv
+
+    spec:
+      containers:
+        - name: d2-container-replicaset
+          image: nginx
+          ports:
+            - containerPort: 80
